@@ -14,13 +14,13 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QWidget" name="widget" native="true">
+   <widget class="QGraphicsView" name="graphicsView">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
+      <x>15</x>
+      <y>11</y>
       <width>771</width>
-      <height>471</height>
+      <height>461</height>
      </rect>
     </property>
    </widget>
@@ -31,7 +31,7 @@
      <x>0</x>
      <y>0</y>
      <width>798</width>
-     <height>19</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

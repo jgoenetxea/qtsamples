@@ -1,6 +1,5 @@
 #include "graphicsview.h"
 
-GraphicsView::GraphicsView(QObject *parent) :
-    QGraphicsView(parent)
+GraphicsView::GraphicsView(QGraphicsScene *scene) : QGraphicsView(scene)
 {
 }

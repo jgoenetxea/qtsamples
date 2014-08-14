@@ -7,7 +7,7 @@ class GraphicsView : public QGraphicsView
 {
     Q_OBJECT
 public:
-    explicit GraphicsView(QObject *parent = 0);
+    GraphicsView(QGraphicsScene *scene);
 
 signals:
 
