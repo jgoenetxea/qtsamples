@@ -248,7 +248,7 @@
      <x>0</x>
      <y>0</y>
      <width>668</width>
-     <height>25</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -267,8 +267,16 @@
      <string>Devices</string>
     </property>
    </widget>
+   <widget class="QMenu" name="menuStackTab">
+    <property name="title">
+     <string>StackTab</string>
+    </property>
+    <addaction name="actionViewFinder"/>
+    <addaction name="actionPreviewLayer"/>
+   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuDevices"/>
+   <addaction name="menuStackTab"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionExit">
@@ -291,6 +299,16 @@
     <string>Settings</string>
    </property>
   </action>
+  <action name="actionViewFinder">
+   <property name="text">
+    <string>ViewFinder</string>
+   </property>
+  </action>
+  <action name="actionPreviewLayer">
+   <property name="text">
+    <string>PreviewLayer</string>
+   </property>
+  </action>
  </widget>
  <customwidgets>
   <customwidget>
@@ -309,8 +327,8 @@
    <slot>record()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>647</x>
-     <y>149</y>
+     <x>542</x>
+     <y>112</y>
     </hint>
     <hint type="destinationlabel">
      <x>61</x>
@@ -325,8 +343,8 @@
    <slot>stop()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>647</x>
-     <y>225</y>
+     <x>542</x>
+     <y>179</y>
     </hint>
     <hint type="destinationlabel">
      <x>140</x>
@@ -341,8 +359,8 @@
    <slot>pause()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>647</x>
-     <y>187</y>
+     <x>542</x>
+     <y>145</y>
     </hint>
     <hint type="destinationlabel">
      <x>234</x>
@@ -405,8 +423,8 @@
    <slot>setMuted(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>647</x>
-     <y>377</y>
+     <x>542</x>
+     <y>343</y>
     </hint>
     <hint type="destinationlabel">
      <x>5</x>

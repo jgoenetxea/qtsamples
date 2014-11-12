@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 3.2.2, 2014-11-12T08:45:11. -->
+<!-- Written by QtCreator 3.2.2, 2014-11-12T10:02:39. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -439,7 +439,7 @@
     <valuelist type="QVariantList" key="Ios.run_arguments"/>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Run on Ipad001's iPad</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Run camera on Ipad001's iPad</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.IosRunConfiguration:/Users/jgoenetxea/Qt/Examples/Qt-5.3/multimediawidgets/camera/camera.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.IosRunConfiguration:/Users/jgoenetxea/Workspace/Qt_samples/camera/camera.pro</value>
     <value type="uint" key="RunConfiguration.QmlDebugServerPort">3768</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>

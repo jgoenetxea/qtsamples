@@ -71,6 +71,7 @@ Camera::Camera(QWidget *parent) :
     //Camera devices:
     QByteArray cameraDevice;
 
+    // Load available cameras
     QActionGroup *videoDevicesGroup = new QActionGroup(this);
     videoDevicesGroup->setExclusive(true);
     foreach(const QByteArray &deviceName, QCamera::availableDevices()) {
@@ -85,13 +86,18 @@ Camera::Camera(QWidget *parent) :
         ui->menuDevices->addAction(videoDeviceAction);
     }
 
+    // Connect interface elements with the camera parameters
     connect(videoDevicesGroup, SIGNAL(triggered(QAction*)), SLOT(updateCameraDevice(QAction*)));
     connect(ui->captureWidget, SIGNAL(currentChanged(int)), SLOT(updateCaptureMode()));
+
+    // Custom inclussion of a showing layer selection
+    connect(ui->actionViewFinder, SIGNAL(triggered()), SLOT(displayViewfinder()));
+    connect(ui->actionPreviewLayer, SIGNAL(triggered()), SLOT(displayCapturedImage()));
 
 #ifdef HAVE_CAMERA_BUTTONS
     ui->lockButton->hide();
 #endif
-
+    // Configure initial camera device
     setCamera(cameraDevice);
 }
 
@@ -130,9 +136,9 @@ void Camera::setCamera(const QByteArray &cameraDevice)
 
     camera->setViewfinder(ui->viewfinder);
 
-    updateCameraState(camera->state());
-    updateLockStatus(camera->lockStatus(), QCamera::UserRequest);
-    updateRecorderState(mediaRecorder->state());
+    updateCameraState(camera->state());                             // interface changes
+    updateLockStatus(camera->lockStatus(), QCamera::UserRequest);   // interface changes
+    updateRecorderState(mediaRecorder->state());                    // interface changes
 
     connect(imageCapture, SIGNAL(readyForCaptureChanged(bool)), this, SLOT(readyForCapture(bool)));
     connect(imageCapture, SIGNAL(imageCaptured(int,QImage)), this, SLOT(processCapturedImage(int,QImage)));
@@ -146,7 +152,7 @@ void Camera::setCamera(const QByteArray &cameraDevice)
     ui->captureWidget->setTabEnabled(0, (camera->isCaptureModeSupported(QCamera::CaptureStillImage)));
     ui->captureWidget->setTabEnabled(1, (camera->isCaptureModeSupported(QCamera::CaptureVideo)));
 
-    updateCaptureMode();
+    camera->setCaptureMode(QCamera::CaptureStillImage); // updateCaptureMode();
     camera->start();
 }
 
