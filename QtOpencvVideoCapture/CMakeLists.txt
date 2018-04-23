@@ -14,7 +14,7 @@ add_executable(${PROJECT_NAME} "main.cpp"
                                "qtClient.cpp"
                                "qtClient.h"
                                "qcvMatViewer.cpp"
-                               "qcvMatViewer.cpp")
+                               "qcvMatViewer.h")
 
 target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Widgets)
 target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS})
